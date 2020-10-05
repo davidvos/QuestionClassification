@@ -13,10 +13,10 @@ This report is a result of the DL4NLP course at the UvA.
   
 * models
 
- * Contains all the weights for our trained CNN models. We trained on different seeds, training set sizes and saved at multiple epochs.
+  * Contains all the weights for our trained CNN models. We trained on different seeds, training set sizes and saved at multiple epochs.
 
 * data
 
- * train_{n}.label - File with n labeled training questions
- * TREC_10.label - File with 500 labeled test questions
+  * train_{n}.label - File with n labeled training questions
+  * TREC_10.label - File with 500 labeled test questions
 
