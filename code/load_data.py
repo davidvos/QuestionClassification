@@ -43,14 +43,14 @@ def store_questions(filename, data_type):
             questions[counter]['question'] = question_to_embeddings(question[1:])
             if counter % 1 == 0:
                 print(f'Question {counter}/5500')
-                with open(f'../data/experiment_pre_processed/{data_type}_{counter}.pickle', 'wb') as pickle_file:
+                with open(f'../data/{data_type}_pre_processed/{data_type}_{counter}.pickle', 'wb') as pickle_file:
                     pickle.dump(questions, pickle_file, protocol=pickle.HIGHEST_PROTOCOL)
                 questions = {}
             counter += 1
 
 def pre_process_data():
 
-    store_questions('../data/masked_questions.label', 'experiment')
+    store_questions('masked_questions.label', 'experiment')
     
 pre_process_data()
 
