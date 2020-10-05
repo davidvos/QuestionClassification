@@ -11,6 +11,7 @@ This report is a result of the DL4NLP course at the UvA.
   * dataset.py - Contains the PyTorch dataset class that is used to process our data to a format usable by the CNN.
   * load_data.py - Pre-processes the raw data to pickle format containing BERT-embeddings. Should be run for training, test and possibly experimental data.
   * Bayesian Model Averaging.ipynb - Used to run the experiments for model uncertainty of questions whose words are eliminated one by one
+  * Predictive Variance.ipynb - Used to run the experiments regarding predictive variance during training
   * CNN training.ipynb - Contains CNN model train loop
   
 * cnn_models
