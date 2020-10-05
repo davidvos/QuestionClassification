@@ -20,4 +20,4 @@ This report is a result of the DL4NLP course at the UvA.
   * train{_n}.label - File with n labeled training questions
   * TREC_10.label - File with 500 labeled test questions
   * masked_questions.label - Should be manually created with all words of a question removed one-by-one. Used for qualitative experiments in Bayesian Model Averaging notebook.
-  * {type_}pre_processed
+  * {type_}pre_processed - Folders containing pickles for BERT embeddings and labels of training, test and experiment data.
