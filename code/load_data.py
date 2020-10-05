@@ -23,7 +23,7 @@ def question_to_embeddings(question):
     final_input = final_input.detach().numpy()
     return final_input
 
-def store_questions(filename, data_type='train'):
+def store_questions(filename, data_type):
     labels = {'ABBR': 0, 'ENTY': 1, 'DESC': 2, 'HUM': 3, 'LOC': 4, 'NUM': 5}
 
     questions = {}
@@ -31,7 +31,7 @@ def store_questions(filename, data_type='train'):
     counter = 0
 
     with open('../data/' + filename, 'r', encoding="ISO-8859-1") as question_file:
-        for question in question_file: 
+        for question in question_file:
             question = question.rstrip().split(' ')
             question_class = question[0].split(':')[0]
             questions[counter] = {}
@@ -41,17 +41,16 @@ def store_questions(filename, data_type='train'):
 
             questions[counter]['label'] = label_vector
             questions[counter]['question'] = question_to_embeddings(question[1:])
-
-            if counter % 100 == 0:
-                print(f'Question {counter}/2000')
-                with open(f'../data/pre_processed/{data_type}_{counter}.pickle', 'wb') as pickle_file:
+            if counter % 1 == 0:
+                print(f'Question {counter}/5500')
+                with open(f'../data/experiment_pre_processed/{data_type}_{counter}.pickle', 'wb') as pickle_file:
                     pickle.dump(questions, pickle_file, protocol=pickle.HIGHEST_PROTOCOL)
                 questions = {}
             counter += 1
 
-def pre_process_data(path):
+def pre_process_data():
 
-    store_questions('../data/train_2000.label', 'train')
+    store_questions('../data/masked_questions.label', 'experiment')
     
-pre_process_data('../data')
+pre_process_data()
 
