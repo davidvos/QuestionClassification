@@ -13,7 +13,7 @@ This report is a result of the DL4NLP course at the UvA.
   * Bayesian Model Averaging.ipynb - Used to run the experiments for model uncertainty of questions whose words are eliminated one by one
   * CNN training.ipynb - Contains CNN model train loop
   
-* models
+* cnn_models
 
   * Contains all the weights for our trained CNN models. We trained on different seeds, training set sizes and saved at multiple epochs.
 
